@@ -1,0 +1,130 @@
+{% extends 'lisandro/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section>
+    <div class="titulos">
+        <h2 class="titulo-secundario titulo-cv">Curriculum</h2>
+        <h1 class="titulo-principal">Educacion y experiencia laboral <a class="cv-download" href="{% static 'lisandro/Lisandro-Leone-CV.pdf' %}" download=""><i class="bi bi-file-earmark-arrow-down"></i></a></h1>
+    </div>
+
+    <div class="cv-container">
+        <div class="cv-item">
+            <div class="cv-educacion">
+                <h3 class="cv-tittle">Educacion relacionada a la programacion</h3>
+                <h4>SQL Server </h4>
+                <h5>2023</h5>
+                <h6>Curso Diego Moisset</h6>
+                <ul>
+                    <li>Diseño y creación de bases de datos incluyendo la definición
+                        de tablas, claves primarias y foráneas, y la normalización de datos</li>
+                    <li>Consultas SQL avanzadas para extraer, actualizar y gestionar datos utilizando SELECT, 
+                        JOIN, UNION y subconsultas.</li>
+                    <li>Uso del entorno Microsoft SQL Server Management Studio</li>
+                    <li>Procedimientos almacenados y funciones definidas por el usuario para automatizar tareas y 
+                        mejorar el rendimiento de la base de datos.</li>
+                </ul>
+
+                <h4>Python</h4>
+                <h5>2024</h5>
+                <h6>Pildoras informaticas</h6>
+                <ul>
+                    <li>Fundamentos de Python</li>
+                    <li>Funciones y Módulos</li>
+                    <li>Manejo de Excepciones</li>
+                    <li>Estructuras de Datos</li>
+                    <li>Programación Orientada a Objetos</li>
+                    <li>Intefaces gráficas con Tkinter</li>
+                    <li>Desarrollo de Aplicaciones Simples</li>
+                </ul>
+
+                <h4>Python y desarrollo web con Django </h4>
+                <h5>2024</h5>
+                <h6>Coderhouse</h6>
+                <ul>
+                    <li>Fundamentos de Django Framework</li>
+                    <li>Configuración del Entorno de Desarrollo</li>
+                    <li>Modelo-Vista-Controlador (MVC)</li>
+                    <li>Creación de modelos de datos utilizando el ORM (Object-Relational Mapping) de Django, y
+                        en la gestión de migraciones para la actualización de la base de datos.</li>
+                    <li>Desarrollo de Vistas y URLs</li>
+                    <li>Sistemas de autenticación y autorización para gestionar el acceso de los usuarios y proteger
+                        áreas sensibles de la aplicación.</li>
+                    <li>Integración con Bases de Datos con SQLite</li>
+                    <li>Despliegue de Aplicaciones</li>
+                </ul>
+                <a href="">Ver certificado <i class="bi bi-file-earmark-arrow-down"></i></a>
+
+                <h4>CSS y Html </h4>
+                <h5>2024</h5>
+                <h6>Bluuweb</h6>
+                <ul>
+                    <li>Creacion de estructuras básicas de páginas web utilizando HTML</li>
+                    <li>Etiquetas HTML Avanzadas</li>
+                    <li>Diseño y Estilo con CSS</li>
+                    <li>Diseño Responsivo</li>
+                    <li>Sistemas de diseño modernos coN Flexbox y CSS Grid para crear layouts flexibles y complejos</li>
+                    <li>Animaciones y Transiciones</li>
+                    <li>Accesibilidad Web</li>
+                    <li>Optimización de imágenes y recursos CSS para mejorar el rendimiento y la carga de la página web.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cv-item">
+            <h3 class="cv-tittle">Experiencia laboral</h3>
+            <h4>Tecnico en higiene y seguridad</h4>
+                <div class="cv-experiencia">
+                    
+                    <div class="experiencia-item trabajos"> 
+                        <div class="h5-container">                
+                            <h5>2018-2020</h5>
+                        </div>  
+                        <h6>Soime Srl</h6>
+
+                        <div class="h5-container">                
+                            <h5>2020-2022</h5>
+                        </div> 
+                        <h6>Post Ingenieria SA</h6>    
+
+                        <div class="h5-container">                
+                            <h5>2022-2024</h5>
+                        </div> 
+                        <h6>Fiksa Srl</h6>
+                    </div>
+
+                    <div class="experiencia-item tareas">
+                        <h6 class="cv-tareas">Tareas Realizadasa</h6>
+                        <ul>
+                            <li>Inspección de Seguridad</li>
+                            <li>Análisis de Accidentes</li>
+                            <li>Procedimientos de Seguridad</li>
+                            <li>Planificación de Emergencias</li>
+                            <li>Capacitaciones al personal</li>
+                            <li>Coordinacion de trabajos</li>
+                            <li>Asesoramiento</li>
+                        </ul>
+                    </div>
+                </div>
+
+        <div class="cv-idiomas">
+            <h3 class="cv-tittle">Idiomas</h3>
+                <ul class="barras-idiomas">
+                    <li class="profile__skills">
+                        <span class="profile__skill-name">Español</span>
+                        <div class="load-bar">
+                            <div class="load-bar__bar bar--100"></div>
+                        </div>
+                    </li>
+                    <li class="profile__skills idiomas">
+                        <span class="profile__skill-name">Ingles</span>
+                        <div class="load-bar">
+                            <div class="load-bar__bar bar--50"></div>
+                        </div>
+                    </li>
+        </div>
+    </div>  
+
+    
+{% endblock  %}
