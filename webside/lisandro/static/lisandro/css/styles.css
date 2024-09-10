@@ -474,6 +474,7 @@ section {
     text-wrap: pretty;
     color: var(--color-secundario);
     font-weight: 500;
+    font-size: 17px;
     letter-spacing: 1px;
 }
 
