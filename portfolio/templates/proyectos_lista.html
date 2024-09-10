@@ -1,0 +1,43 @@
+{% extends 'lisandro/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section>
+    <div class="titulos">
+        <h2 class="titulo-secundario titulo-portfolio">Portafolio</h2>
+        <h1 class="titulo-principal">Mis proyectos</h1>
+    </div>
+
+    <div class="filtros-container">
+        <ul class="filtros-list">
+            <li class="{% if not request.GET.estado %} active {% endif %}">
+                <a class="filtros-option" href="{% url 'portfolio:proyectos_lista' %}">Todo</a>
+            </li>
+            <li class="{% if request.GET.estado == 'terminado' %} active {% endif %}">
+                <a class="filtros-option" href="{% url 'portfolio:proyectos_lista' %}?estado=terminado">Terminado</a>
+                <i class="bi bi-circle-fill" style="color: green; font-size: small;"></i>
+            </li>
+            <li class="{% if request.GET.estado == 'en_desarrollo' %} active {% endif %}">
+                <a class="filtros-option" href="{% url 'portfolio:proyectos_lista' %}?estado=en_desarrollo">En desarrollo</a>
+                <i class="bi bi-circle-fill" style="color: blue; font-size: small;"></i>
+            </li>
+        </ul>
+    </div>
+    <div class="portafolio-container">
+        {% for proyecto in proyectos %}
+        <div class="portafolio-item">
+            <div class="portafolio-wrap">
+                <h4>{{ proyecto.nombre }}</h4>
+                <img src="{{ proyecto.imagen.url }}" class="portafolio-img">
+                <p class="parrafo">{{ proyecto.descripcion }}</p>
+                <a href="{{proyecto.url}}">Ir al repositorio <i class="bi bi-box-arrow-in-up-right"></i></a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+
+    
+{% endblock  %}
