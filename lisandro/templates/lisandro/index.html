@@ -1,0 +1,69 @@
+{% extends 'lisandro/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <main>
+        <div class="container-grid">
+            <div class="grid">
+                <div class="grid__item-img">
+                    <div class="grid__img-container">
+                        <img src="{% static 'lisandro/img/fotoCV3.jpg' %}" alt="" class="profile__img">
+                    </div>
+                </div>    
+                <div class="grid__item-data">
+                        <div class="text-container">
+                            <h2 class="text">DESARROLADOR JUNIOR: </h2>
+                            <h3 class="text">Full Stack</h3>
+                        </div>
+                        <div>
+                            <ul class="profile__social-media">
+                                <li class="social-media"><a class="social-media-icons" href="https://www.linkedin.com/in/leone-lisandro/" title="Ir a Linkedin"><i class="bi bi-linkedin"></i></a> </li>
+                                <li class="social-media"><a class="social-media-icons" href="https://github.com/LisandroLeone1" title="Ir a Github"><i class="bi bi-github"></i></a></li>
+                                <li class="social-media"><a class="social-media-icons" href="https://wa.me/+5493416721105" title="Ir a Whatsapp"><i class="bi bi-whatsapp"></i></a></li>
+                                <li class="social-media"><a class="social-media-icons" href="{% static 'lisandro/Lisandro-Leone-CV.pdf' %}" download="" title="Descargar CV"><i class="bi bi-file-earmark-person"></i></a></li>
+                                <li class="social-media"><a class="social-media-icons" href="https://www.instagram.com/lisandro.leone/" title="Ir a Instragram"><i class="bi bi-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="profile__skills-container">
+                            <ul>
+                                <li class="profile__skills">
+                                    <span class="profile__skill-name">Python</span>
+                                    <div class="load-bar">
+                                        <div class="load-bar__bar bar--85"></div>
+                                    </div>
+                                </li>
+                                
+                                <li class="profile__skills">
+                                    <span class="profile__skill-name">Django</span>
+                                    <div class="load-bar">
+                                        <div class="load-bar__bar bar--85"></div>
+                                    </div>
+                                </li>
+                                <li class="profile__skills">
+                                    <span class="profile__skill-name">CSS</span>
+                                    <div class="load-bar">
+                                        <div class="load-bar__bar bar--85"></div>
+                                    </div>
+                                </li>
+                                <li class="profile__skills">
+                                    <span class="profile__skill-name">HTML</span>
+                                    <div class="load-bar">
+                                        <div class="load-bar__bar bar--85"></div>
+                                    </div>
+                                </li>
+                                <li class="profile__skills">
+                                    <span class="profile__skill-name">SQL Server</span>
+                                    <div class="load-bar">
+                                        <div class="load-bar__bar bar--65"></div>
+                                    </div>
+                                </li>
+                            </ul>
+    
+                        </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    {% endblock content %}
