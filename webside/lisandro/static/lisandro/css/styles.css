@@ -76,10 +76,11 @@ body, header, nav, h1, div, ul, li, main, h1, h2, h3, h4, h5, h6, p, section {
 }
 
 .header__nav-list {
-    width: 500px;
+    width: auto;
     display: flex;
     justify-content: space-between;
     margin-right: 90px;
+    gap: 25px;
 }
 
 .header__nav-item {
@@ -148,7 +149,7 @@ body, header, nav, h1, div, ul, li, main, h1, h2, h3, h4, h5, h6, p, section {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        height: 30vh;
+        height: 70%;
         margin: auto;
         width: auto;
         gap: 10px;
@@ -156,8 +157,18 @@ body, header, nav, h1, div, ul, li, main, h1, h2, h3, h4, h5, h6, p, section {
     }
 }
 
+@media screen and (max-width:400px) {
+    .header__nombre {
+        font-size: 30px;
+    }
+}
+
 /* ----------PROFILE SECTION----------- */
 
+.container-grid {
+    max-width: 1400px; /* ancho máximo */
+    margin: 0 auto;
+}
 
 .grid {
     width: 90%;
@@ -169,7 +180,6 @@ body, header, nav, h1, div, ul, li, main, h1, h2, h3, h4, h5, h6, p, section {
     margin-top: 25px;
     color: var(--color-secundario);
     padding: 20px;
-    
 }
 
 .grid__item-img {
@@ -703,6 +713,14 @@ section {
     .container-contacto {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto;
+    }
+}
+
+@media (min-height: 950px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 80px;
     }
 }
 
