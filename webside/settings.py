@@ -146,10 +146,25 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
+#Email
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = env('EMAIL_HOST')
 EMAIL_PORT = env.int('EMAIL_PORT')
 EMAIL_USE_TLS = env.bool('EMAIL_USE_TLS')
 EMAIL_HOST_USER = env('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+
+#HTTPS  
+SECURE_SSL_REDIRECT = True
+SECURE_HSTS_SECONDS = 31536000  # 1 año en segundos
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
+# Activa el filtro de XSS del navegador
+SECURE_BROWSER_XSS_FILTER = True
+# Previene que el navegador interprete incorrectamente el tipo de contenido
+SECURE_CONTENT_TYPE_NOSNIFF = True
+# Las cookies de CSRF deben ser seguras y solo enviadas a través de HTTPS
+CSRF_COOKIE_SECURE = True
+# Las cookies de sesión deben ser seguras y solo enviadas a través de HTTPS
+SESSION_COOKIE_SECURE = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
