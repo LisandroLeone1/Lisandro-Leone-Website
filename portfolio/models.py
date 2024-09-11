@@ -5,6 +5,7 @@ class Proyectos(models.Model):
         ('en_desarrollo', 'En Desarrollo'),
         ('terminado', 'Terminado'),
         ('pausado', 'Pausado'),
+        ('cancelado', 'Cancelado'),
     ]
 
     nombre = models.CharField(max_length=200)
