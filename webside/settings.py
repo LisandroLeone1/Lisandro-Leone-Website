@@ -155,16 +155,16 @@ EMAIL_HOST_USER = env('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 
 #HTTPS  
-SECURE_SSL_REDIRECT = False
+SECURE_SSL_REDIRECT = True
 SECURE_HSTS_SECONDS = 31536000  # 1 año en segundos
-SECURE_HSTS_INCLUDE_SUBDOMAINS = False
-SECURE_HSTS_PRELOAD = False
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
 # Activa el filtro de XSS del navegador
-SECURE_BROWSER_XSS_FILTER = False
+SECURE_BROWSER_XSS_FILTER = True
 # Previene que el navegador interprete incorrectamente el tipo de contenido
-SECURE_CONTENT_TYPE_NOSNIFF = False
+SECURE_CONTENT_TYPE_NOSNIFF = True
 # Las cookies de CSRF deben ser seguras y solo enviadas a través de HTTPS
-CSRF_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = True
 # Las cookies de sesión deben ser seguras y solo enviadas a través de HTTPS
-SESSION_COOKIE_SECURE = False
+SESSION_COOKIE_SECURE = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
