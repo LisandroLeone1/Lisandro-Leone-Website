@@ -504,7 +504,7 @@ section {
 
     .backgroud-image {
         height: 220px; /* Establece una altura fija para la imagen en pantallas pequeñas */
-        background-position: 0px -110px;
+        background-position: 0px -90px;
     }
     .contenido-container {
         min-width: 0;
