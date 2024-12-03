@@ -15,6 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -31,7 +32,7 @@
         <nav class="header__nav">
             <ul class="header__nav-list">
                 <li class="header__nav-item "><a href="{% url 'lisandro:home' %}" class="{% if request.path == '/' %} active {% endif %}">Inicio</a>
-                <li class="header__nav-item"><a href="{% url 'lisandro:about' %}" class="{% if request.path == '/about' %} active {% endif %}">Acerca de mi</a></li>
+                <li class="header__nav-item"><a href="{% url 'lisandro:about' %}" class="{% if request.path == '/about' %} active {% endif %}">Acerca de mí</a></li>
                 <li class="header__nav-item"><a href="{% url 'lisandro:curriculum' %}" class="{% if request.path == '/curriculum' %} active {% endif %}">Curriculum</a></li>
                 <li class="header__nav-item"><a href="{% url 'portfolio:proyectos_lista' %}" class="{% if request.path == '/portfolio/' %} active {% endif %}">Portafolio</a></li>
                 <li class="header__nav-item"><a href="{% url 'contacto:contacto' %}" class="{% if request.path == '/contacto/' %} active {% endif %}">Contacto</a></li>

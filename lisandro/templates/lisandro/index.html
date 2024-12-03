@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-
+    <script defer src="{% static 'lisandro/js/steps.js' %}"></script>
     <main>
         <div class="container-grid">
             <div class="grid">
@@ -13,8 +13,8 @@
                 </div>    
                 <div class="grid__item-data">
                         <div class="text-container">
-                            <h2 class="text">DESARROLADOR JUNIOR: </h2>
-                            <h3 class="text">Full Stack</h3>
+                            <h2 class="text" id="typewriter-text"> </h2>
+                            <h3 class="text" id="typewriter-subtext"></h3>
                         </div>
                         <div>
                             <ul class="profile__social-media">

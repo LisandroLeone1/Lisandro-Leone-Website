@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-
+<script defer src="{% static 'lisandro/js/modal.js' %}"></script>
 <section>
     <div class="titulos">
         <h2 class="titulo-secundario titulo-portfolio">Portafolio</h2>
@@ -34,8 +34,35 @@
             <div class="portafolio-wrap">
                 <h4>{{ proyecto.nombre }}</h4>
                 <img src="{{ proyecto.imagen.url }}" class="portafolio-img">
-                <p class="parrafo">{{ proyecto.descripcion }}</p>
-                <a href="{{proyecto.url}}">Ir al repositorio <i class="bi bi-box-arrow-in-up-right"></i></a>
+                <p class="parrafo">{{ proyecto.categoria }}</p>
+                <i class="bi bi-plus-lg link-portafolio" id="modal-open-{{ forloop.counter }}"></i>
+            </div>
+        </div>
+
+        <div class="modal" id="modal-{{ forloop.counter }}">
+            <div class="modal__container">
+                <div class="modal-tittle">
+                    <h1>{{ proyecto.nombre }}</h1>
+                    <span id="modal-close-{{ forloop.counter }}">X</span>
+                </div>
+                <div class="modal-main">
+                    <div class="modal-img">
+                        <img src="{{ proyecto.imagen.url }}" alt="">
+                    </div>
+                    <div class="modal-content">
+                        <h3>Información del proyecto</h3>
+                        <ul>
+                            <li>Categoria:<span>{{proyecto.categoria}}</span></li>
+                            <li>Fecha de inicio: <span>{{proyecto.fecha_inicio}}</span></li>
+                            <li>Estado del proyecto: <span>{{ proyecto.get_estado_display }}</span></li>
+                            <li>Tecnologias aplicadas: <span>{{proyecto.lenguajes}}</span></li>
+                        </ul>
+                        <p>{{proyecto.descripcion}}</p>
+                    </div>
+                </div>
+                <div class="modal-link">
+                    <a href="{{proyecto.url}}" class="link-portafolio">Ir al repositorio <i class="bi bi-box-arrow-in-up-right"></i></a>
+                </div>
             </div>
         </div>
         {% endfor %}
