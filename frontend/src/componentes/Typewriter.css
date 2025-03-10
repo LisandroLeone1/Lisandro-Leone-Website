@@ -1,0 +1,23 @@
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100px;
+}
+
+.text {
+    font-size: 33px;
+    letter-spacing: 5px;
+    color: #fff;
+}
+
+
+h3.text {
+    color: rgb(54, 112, 201);
+}
+
+.cursor {
+    color: #fff;
+    font-weight: 400;
+}

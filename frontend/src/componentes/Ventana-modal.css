@@ -1,0 +1,203 @@
+
+.modal {
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100vw; /* Ancho total de la pantalla */
+    height: 100vh;
+    background-color: rgba(0,0,0,0.9); 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+}
+
+.show {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+  
+  .modal__container {
+    color: #fff;
+    width: 1100px;
+    height: auto;
+    box-shadow: 0 0 0 0.5px var(--color-secundario); 
+    margin: 30px;
+    border-radius: 5px;
+  }
+  
+  .modal-tittle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0.5px 0 0 var(--color-secundario);
+    padding: 25px;
+  }
+  
+  .modal-tittle h1 {
+    font-size: 27px;
+  }
+  
+  .modal-tittle span {
+    font-size: 21px;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--color-secundario);
+    transition: color 0.5s ease;
+  }
+  
+  .modal-tittle span:hover {
+    color: var(--color-principal);
+  }
+  
+  .modal-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px;
+    padding: 20px;
+    gap: 50px;
+  }
+  
+  .modal-img {
+    width: 550px;
+    height: 290px;
+  }
+  
+  .modal-img img {
+    width: 100%;
+    height: 95%;
+  }
+
+  .button-img-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+  }
+  
+  .button-img {
+    border: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3); /* Color blanco con transparencia */
+    margin: 0 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-img:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Aumenta la opacidad al hacer hover */
+    transform: scale(1.2); /* Efecto de agrandado sutil */
+}
+
+  
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    overflow-y: scroll; 
+    overflow-x: hidden; 
+  }
+  .modal-content::-webkit-scrollbar {
+    width: 5px; 
+    background-color: var(--color-secundario);
+  }
+  
+  .modal-content h3 {
+    color: rgb(5, 71, 170);
+    font-size: 23px;
+    font-weight: 700;
+  }
+  
+  .modal-content ul {
+    list-style: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 5px;
+    box-shadow: 0 2px 4px -2px var(--color-secundario);
+  }
+  
+  .modal-content ul li {
+    margin-top: 8px;
+  }
+  
+  .modal-content ul li span {
+    margin-left: 7px;
+    font-weight: 400;
+    color: var(--color-secundario);
+  }
+  
+  .modal-content p {
+    color: var(--color-secundario);
+    font-size: 15px;
+    font-weight: 400;
+    margin: 10px 0px;
+  }
+  
+  .modal-link {
+    padding: 30px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .modal-link a {
+    font-size: 17px;
+    font-weight: 400;
+  }
+  
+  @media screen and (max-width:1100px) {
+    .modal-img {
+        width: 450px;
+        height: 260px;
+        margin: auto;
+    }
+  }
+  @media screen and (max-width:900px) {
+    .portafolio-container {
+        overflow: hidden;
+    }
+    .modal__container {
+        color: #fff;
+        max-width: 650px;
+        height: 535px;
+        box-shadow: 0 0 0 0.5px var(--color-secundario); /* Simula un borde de 0.5px */
+        border-radius: 5px;
+    }
+    .modal-tittle {
+        padding: 20px;
+    }
+    .modal-tittle h1 {
+        font-size: 23px;
+    }
+    .modal-tittle span {
+        font-size: 18px;
+    }
+    .modal-main {
+        display: block;
+        padding: 20px;
+        overflow-y: scroll;
+        overflow-x: hidden; 
+        max-height: 400px; 
+    }
+    .modal-main::-webkit-scrollbar {
+        width: 5px; /* Ancho de la barra */
+        background-color: var(--color-secundario);
+    }
+    .modal-content {
+        overflow: hidden;
+        margin-top: 20px;
+  
+    }
+    .modal-img {
+        width: 100%;
+        height: 250px;
+    }
+    .modal-link {
+        padding: 25px;
+    }
+}

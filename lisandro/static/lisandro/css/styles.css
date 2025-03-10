@@ -239,7 +239,7 @@ body, header, nav, h1, div, ul, li, main, h1, h2, h3, h4, h5, h6, p, section {
     background-color:var(--color-decoracion-2);
 }
 
-/*---------EFECTO TYPE-WRITTER---------*/
+/*---------EFECTO TYPE-WRITTER---------
 
 .text-container {
     display: flex;
@@ -254,12 +254,12 @@ body, header, nav, h1, div, ul, li, main, h1, h2, h3, h4, h5, h6, p, section {
     letter-spacing: 5px;
     color: var(--color-principal);
     overflow: hidden;
-    border-right: 2px solid var(--color-principal); /* simula el cursor */
+    border-right: 2px solid var(--color-principal); 
     animation: blink 1s steps(2, start) infinite;
 }
 
 .text.no-cursor {
-    border-right: none; /* oculto el cursor */
+    border-right: none; 
 }
 
 h3.text {
@@ -270,7 +270,7 @@ h3.text {
     50% {
         border-color: transparent;
     }
-}
+}*/
 
 /*---------BARRA DE SKILLS---------*/
 
@@ -316,13 +316,13 @@ h3.text {
     width: 100%;
 }
 
-.bar--85 {
-    width: 85%;
+.bar--90 {
+    width: 90%;
     animation: python 3.5s ease-in;
 }
 
-.bar--65 {
-    width: 65%;
+.bar--70 {
+    width: 70%;
     animation: sql 3.5s ease-in;
 }
 
@@ -336,7 +336,7 @@ h3.text {
         width: 0%;
     }
     to {
-        width: 85%;
+        width: 90%;
     }
 }
 
@@ -345,7 +345,7 @@ h3.text {
         width: 0%;
     }
     to {
-        width: 65%;
+        width: 70%;
     }
 }
 
@@ -413,6 +413,7 @@ section {
     width: 90vw;
     margin: auto;
 }
+
 .contenedor {
     display: flex;
     flex-direction: row;
@@ -696,6 +697,8 @@ section {
 
 /*------- PORTAFOLIO SECTION --------*/
 
+
+/*-- 
 .titulo-portfolio::before {
     left: 113px;
 }
@@ -821,9 +824,9 @@ section {
 }
 
 .portafolio-img:hover {
-    filter: brightness(1); /* Brillo original */
-}
+    filter: brightness(1);} /* Brillo original */
 
+/*--
 .portafolio-wrap p {
     font-size: 13px;
     font-weight: 400;
@@ -857,11 +860,11 @@ section {
         
     }
 }
-
+--*/
 
 /*--- ventana modal ---*/
 
-
+/*
 .modal {
     position: fixed;
     z-index: 2000;
@@ -1007,7 +1010,7 @@ section {
         color: #fff;
         width: 500px;
         height: 535px;
-        box-shadow: 0 0 0 0.5px var(--color-secundario); /* Simula un borde de 0.5px */
+        box-shadow: 0 0 0 0.5px var(--color-secundario); /* Simula un borde de 0.5px *//*
         border-radius: 5px;
     }
     .modal-tittle {
@@ -1027,7 +1030,7 @@ section {
         max-height: 400px; 
     }
     .modal-main::-webkit-scrollbar {
-        width: 5px; /* Ancho de la barra */
+        width: 5px; /* Ancho de la barra *//*
         background-color: var(--color-secundario);
     }
     .modal-content {
@@ -1041,7 +1044,7 @@ section {
     .modal-link {
         padding: 25px;
     }
-}
+}*/
 
 
 /*----------CV SECTION-------------*/
