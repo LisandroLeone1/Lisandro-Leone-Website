@@ -1,3 +1,6 @@
+body {
+  --color-secundario: #c0bebe;
+}
 
 .modal {
     position: fixed;
@@ -58,7 +61,7 @@
   .modal-main {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 300px;
+    grid-template-rows: 320px;
     padding: 20px;
     gap: 50px;
   }
@@ -84,15 +87,16 @@
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.3); /* Color blanco con transparencia */
+    background-color: rgba(255, 255, 255, 0.3); 
     margin: 0 6px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.button-img:hover {
-    background-color: rgba(255, 255, 255, 0.7); /* Aumenta la opacidad al hacer hover */
-    transform: scale(1.2); /* Efecto de agrandado sutil */
+.button-img:hover,
+.button-img.hover { 
+    background-color: rgba(255, 255, 255, 0.7); 
+    transform: scale(1.2); 
 }
 
   
@@ -118,7 +122,7 @@
     list-style: none;
     font-size: 16px;
     font-weight: 500;
-    padding: 10px 5px;
+    padding: 0px 5px 10px 5px;
     box-shadow: 0 2px 4px -2px var(--color-secundario);
   }
   
@@ -140,9 +144,10 @@
   }
   
   .modal-link {
-    padding: 30px;
+    padding: 25px;
     display: flex;
     justify-content: flex-end;
+    box-shadow: 0 -0.5px 0 0 var(--color-secundario);
   }
   
   .modal-link a {

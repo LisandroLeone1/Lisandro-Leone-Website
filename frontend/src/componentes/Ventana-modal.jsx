@@ -23,13 +23,15 @@ const Ventana = ({proyecto, onClose, modalVisible}) => {
                 <div className="modal-main">
                     <div className="modal-img">
                         <img src={ imagen } alt=""></img>
-                        <div className="button-img-container">   
+                        <div className="button-img-container">
                             {imagenes.map((imagen, indice) => (
-                            <button value={indice}  onMouseOver={() => {
-                                setImagenActual(indice)
-                            }}className="button-img"></button>
-                            ))}
-                        </div>
+                            <button
+                                value={indice}
+                                onMouseOver={() => setImagenActual(indice)}
+                                className={`button-img ${indice === imagenActual ? 'hover' : ''}`}
+                            ></button>
+    ))}
+</div>
                     </div>
                     <div className="modal-content">
                         <h3>Información del proyecto</h3>
