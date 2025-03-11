@@ -6,8 +6,9 @@ En él podemos encontrar las siguientes secciones:
 
 Inicio:
 Esta sección presenta una página simple con una fotografía personal y, junto a ella, una sección desarrollada como un componente en React.En este componente se muestra:
-- Mi nombre completo
+- Mi nombre completo.
 - Un efecto dinámico TypeWriter que resalta, una por una, las tecnologías en las que me especializo.
+
 Debajo podemos ver iconos de acceso rápido a mis perfiles de LinkedIn, GitHub, Instagram y WhatsApp, además de un botón para descargar mi currículum vitae en PDF.
 Luego de estos iconos, se encuentran barras de progreso que representan visualmente mis habilidades en distintos lenguajes de programación.
 Si se accede desde un dispositivo móvil, el diseño se adapta para que mi nombre, los iconos y las barras de habilidades se ubiquen debajo de la foto, mejorando la experiencia de usuario en pantallas más pequeñas.
@@ -23,12 +24,13 @@ En pantallas móviles las columnas no se visualizan una al lado de la otra, sino
 Portfolio:
 El frontend de esta sección está desarrollado con React, mientras que el backend está construido con Django. Para la comunicación entre ambos, utilizo Django REST Framework (DRF), que me permite utilizar los datos a través de una API.
 En esta sección se encuentran mis proyectos de programación, tanto con fines prácticos como productivos. Cada proyecto está almacenado en una base de datos SQLite3, desde donde se obtienen los siguientes datos mediante la API:
-- Nombre del proyecto
-- Descripción breve
-- Tecnologías utilizadas
-- Estado del proyecto (En producción, En desarrollo o Cancelado)
-- Fecha de inicio
-- Enlace al repositorio en GitHub
+- Nombre del proyecto.
+- Descripción breve.
+- Tecnologías utilizadas.
+- Estado del proyecto (En producción, En desarrollo o Cancelado).
+- Fecha de inicio.
+- Enlace al repositorio en GitHub.
+
 Además, cada proyecto cuenta con cuatro imágenes asociadas, también almacenadas en la base de datos. Estas imágenes se pueden visualizar de manera dinámica, permitiendo al usuario cambiar entre ellas mediante botones interactivos.
 Para mejorar la experiencia de navegación, los proyectos pueden filtrarse según su estado, facilitando la búsqueda de aquellos que están en producción, en desarrollo o han sido cancelados.
 En dispositivos móviles, los proyectos se organizan en filas, optimizando la presentación para pantallas más pequeñas.
@@ -49,12 +51,9 @@ Todo esto tambien se adapta a dispositivos moviles.
 ESTRUCTURA DEL PROYECTO
 
 Este sitio web ha sido desarrollado con Django como backend y React para el frontend en ciertas secciones. A continuación, se detalla la organización del proyecto:
-
-Aplicaciones dentro del proyecto Django
-
 El proyecto cuenta con tres aplicaciones principales:
 
--lisandro (App principal)
+- lisandro (App principal)
 
 Contiene el template principal index.html, que actúa como la página de inicio.
 Incluye otras secciones como:
@@ -67,7 +66,7 @@ También aquí se usa React, específicamente el componente TypeWriter, para mos
 
 La lógica del formulario, incluyendo la validación y el envío de datos, está implementada en esta aplicación.
 
--portafolio (Sección de proyectos)
+- portafolio (Sección de proyectos)
 
 El backend expone los datos de los proyectos a través de una API creada con Django REST Framework.
 El frontend de esta sección está desarrollado con React, obteniendo los datos desde la API y generando los componentes dinámicamente.
