@@ -13,6 +13,13 @@ const Ventana = ({proyecto, onClose, modalVisible}) => {
 
     const imagen = imagenes[imagenActual];
 
+    const ESTADO_CHOICES = {
+        en_desarrollo: "En Desarrollo",
+        terminado: "Terminado",
+        pausado: "Pausado",
+        cancelado: "Cancelado",
+    };
+
     return (
         <div className={`modal ${modalVisible ? 'show' : ''}`}>
             <div className="modal__container">
@@ -38,7 +45,7 @@ const Ventana = ({proyecto, onClose, modalVisible}) => {
                         <ul>
                             <li>Categoria:<span>{proyecto.categoria}</span></li>
                             <li>Fecha de inicio: <span>{proyecto.fecha_inicio}</span></li>
-                            <li>Estado del proyecto: <span>{ proyecto.get_estado_display }</span></li>
+                            <li>Estado del proyecto: <span>{ESTADO_CHOICES[proyecto.estado]}</span></li>
                             <li>Tecnologias aplicadas: <span>{proyecto.lenguajes}</span></li>
                         </ul>
                         <p>{proyecto.descripcion}</p>

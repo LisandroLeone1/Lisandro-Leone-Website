@@ -45,6 +45,7 @@ Todo esto tambien se adapta a dispositivos moviles.
 
 
 
+
 ESTRUCTURA DEL PROYECTO
 
 Este sitio web ha sido desarrollado con Django como backend y React para el frontend en ciertas secciones. A continuación, se detalla la organización del proyecto:
