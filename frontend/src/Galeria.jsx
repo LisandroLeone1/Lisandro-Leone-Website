@@ -10,7 +10,7 @@ const Galeria = () => {
     const [filtro, setFiltro] = useState("todos"); // Estado para el filtro
 
     useEffect(() => {
-        fetch('http://127.0.0.1:8000/portfolio/api/v1/proyectos/') // URL de la API de Django
+        fetch('https://lisandroleone-ea8864731e74.herokuapp.com/portfolio/api/v1/proyectos/') // URL de la API de Django
             .then(response => response.json())
             .then(data => {
                 console.log(data); 
