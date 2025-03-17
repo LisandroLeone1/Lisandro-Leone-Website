@@ -1,16 +1,11 @@
 import './Ventana-modal.css';
-import React, { use, useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
-const Ventana = ({proyecto, onClose, modalVisible}) => {
-
+const Ventana = ({ proyecto, onClose, modalVisible }) => {
     const [imagenActual, setImagenActual] = useState(0);
+    let startX = 0;
 
-    const imagenes = [proyecto.imagen,
-        proyecto.imagen2,
-        proyecto.imagen3,
-        proyecto.imagen4
-    ].filter(img => img);
-
+    const imagenes = [proyecto.imagen, proyecto.imagen2, proyecto.imagen3, proyecto.imagen4].filter(img => img);
     const imagen = imagenes[imagenActual];
 
     const ESTADO_CHOICES = {
@@ -20,25 +15,48 @@ const Ventana = ({proyecto, onClose, modalVisible}) => {
         cancelado: "Cancelado",
     };
 
+    const handleTouchStart = (e) => {
+        startX = e.touches[0].clientX;
+    };
+
+    const handleTouchMove = (e) => {
+        if (!startX) return;
+        const endX = e.touches[0].clientX;
+        const diffX = startX - endX;
+
+        if (diffX > 50) {
+            // Deslizar a la izquierda (siguiente imagen)
+            setImagenActual((prev) => (prev + 1) % imagenes.length);
+        } else if (diffX < -50) {
+            // Deslizar a la derecha (imagen anterior)
+            setImagenActual((prev) => (prev - 1 + imagenes.length) % imagenes.length);
+        }
+
+        startX = 0; // Resetear el punto de inicio
+    };
+
     return (
         <div className={`modal ${modalVisible ? 'show' : ''}`}>
             <div className="modal__container">
                 <div className="modal-tittle">
-                    <h1>{ proyecto.nombre }</h1>
+                    <h1>{proyecto.nombre}</h1>
                     <span onClick={onClose}>X</span>
                 </div>
                 <div className="modal-main">
-                    <div className="modal-img">
-                        <img src={ imagen } alt=""></img>
+                    <div className="modal-img"
+                        onTouchStart={handleTouchStart}
+                        onTouchMove={handleTouchMove}
+                    >
+                        <img src={imagen} alt="" />
                         <div className="button-img-container">
-                            {imagenes.map((imagen, indice) => (
-                            <button
-                                value={indice}
-                                onMouseOver={() => setImagenActual(indice)}
-                                className={`button-img ${indice === imagenActual ? 'hover' : ''}`}
-                            ></button>
-    ))}
-</div>
+                            {imagenes.map((_, indice) => (
+                                <button
+                                    key={indice}
+                                    onMouseOver={() => setImagenActual(indice)}
+                                    className={`button-img ${indice === imagenActual ? 'hover' : ''}`}
+                                ></button>
+                            ))}
+                        </div>
                     </div>
                     <div className="modal-content">
                         <h3>Información del proyecto</h3>
