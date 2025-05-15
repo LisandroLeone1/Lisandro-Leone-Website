@@ -450,13 +450,25 @@ section {
     min-width: 600px; /* tamaño mínimo */
 }
 
-.contenido-container p {
+.contenido-container p,
+.contenido-container ul,
+.contenido-container li {
     text-wrap: pretty;
     color: var(--color-secundario);
     font-weight: 500;
     font-size: 17px;
     letter-spacing: 1px;
 }
+
+.contenido-container ul {
+    padding-left: 1.2em;
+    list-style-type: disc;
+}
+
+.contenido-container li {
+    margin-top: 5px;
+}
+
 
 @media screen and (max-width: 800px) {
     .contenedor {

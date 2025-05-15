@@ -13,7 +13,7 @@ class Proyectos(models.Model):
     fecha_finalizacion = models.DateField(null=True, blank=True)
     lenguajes = models.CharField(max_length=200, blank=True, null=True)
     categoria = models.CharField(max_length=20, blank=True, null=True)
-    descripcion = models.CharField(max_length=3000, blank=True, null=True)
+    descripcion= models.TextField(blank=True, null=True)
     imagen = models.ImageField(null=True,blank=True,upload_to='imgs')
     imagen2 = models.ImageField(null=True,blank=True,upload_to='imgs')
     imagen3 = models.ImageField(null=True,blank=True,upload_to='imgs')
