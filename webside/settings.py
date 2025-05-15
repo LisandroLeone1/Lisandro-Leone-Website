@@ -67,8 +67,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'webside.urls'
 
-CORS_ALLOWED_ORIGINS = ["https://lisandroleone-ea8864731e74.herokuapp.com",
-"http://localhost:5173",]
+CORS_ALLOWED_ORIGINS = ["http://localhost:5173", "https://lisandroleone-ea8864731e74.herokuapp.com"]
 
 TEMPLATES = [
     {
